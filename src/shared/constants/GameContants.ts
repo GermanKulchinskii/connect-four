@@ -1,0 +1,6 @@
+const GAME_MODES = {
+    SINGLE_PLAYER: 'SINGLE_PLAYER',
+    MULTI_PLAYER: 'MULTI_PLAYER',
+}
+
+export default GAME_MODES;

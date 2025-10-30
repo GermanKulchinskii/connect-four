@@ -1,0 +1,13 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --main-green: #41B883;
+  --main-gray: #1E2021;
+}
+
+body {
+  background-color: var(--main-gray);
+  color: var(--main-green);
+}

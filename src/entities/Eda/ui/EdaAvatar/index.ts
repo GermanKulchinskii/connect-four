@@ -1,0 +1,1 @@
+export {EdaAvatar} from "./ui/EdaAvatar";
