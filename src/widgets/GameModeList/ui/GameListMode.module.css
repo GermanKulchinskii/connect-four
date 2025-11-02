@@ -1,0 +1,10 @@
+.gameModeList {
+    display: grid;
+    grid-template-columns: 130px 130px;
+    gap: 30px;
+}
+
+.wrapper {
+    text-align: center;
+    width: fit-content;
+}

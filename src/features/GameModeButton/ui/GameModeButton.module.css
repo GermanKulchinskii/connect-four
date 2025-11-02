@@ -1,0 +1,14 @@
+.gameModeBtn {
+    width: 130px;
+    height: 130px;
+    border-radius: 7px;
+    background-color: var(--main-gray);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .7);
+    transition: all ease 0.3s;
+}
+
+@media (hover:hover) {
+    .gameModeBtn:hover {
+        transform: scale(1.2);
+    }
+}
