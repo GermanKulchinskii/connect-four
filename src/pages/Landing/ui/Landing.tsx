@@ -10,7 +10,9 @@ export const Landing = () => {
 				<Reference path="https://github.com/GermanKulchinskii/connect-four">Исходный код на GitHub</Reference>
 				<Reference path="">Резюме</Reference>
 			</div>
-			<GameModeList />
+			<div className={css.menu}>
+				<GameModeList />
+			</div>
 			<Eda className={css.eda} />
 		</>
 	)

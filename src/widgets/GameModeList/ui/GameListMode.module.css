@@ -1,6 +1,6 @@
 .gameModeList {
     display: grid;
-    grid-template-columns: 130px 130px;
+    grid-template-columns: 160px 160px;
     gap: 30px;
 }
 
