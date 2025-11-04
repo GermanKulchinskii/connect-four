@@ -5,16 +5,20 @@ import useGameStore from "@/entities/Game/model/Model";
 interface GameColumnProps {
 	columnIndex: number;
 	useStore?: typeof useGameStore;
+	onClick?: (arg0: number) => void;
 }
 
 export const GameColumn = (props: GameColumnProps) => {
-	const {columnIndex, useStore: custom} = props;
+	const {columnIndex, useStore: custom, onClick = () => []} = props;
 	const store = custom || useGameStore;
 	const { board, makeMove, winner, playerTurn, gameMode } = store();
 
 
 	const handleClick = () => {
 		if (!winner && (gameMode === "Single" || playerTurn === "First")) makeMove(columnIndex);
+		if (gameMode === 'Single') {
+			onClick(columnIndex)
+		}
 	};
 
 	const columnCells = board.map((row) => row[columnIndex]);

@@ -7,14 +7,12 @@ interface GameState {
 	gameMode: 'Single' | 'Eda';
 	makeMove: (column: number) => void;
 	resetGame: () => void;
-	
 }
 
-const WIDTH = 7;
-const HEIGHT = 6;
+export const WIDTH = 7;
+export const HEIGHT = 6;
 
 const createEmptyBoard = () => Array.from({ length: HEIGHT }, () => Array(WIDTH).fill(0));
-
 
 const useGameStore = create<GameState>((set, get) => ({
 	playerTurn: "First",
