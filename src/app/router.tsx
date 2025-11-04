@@ -1,5 +1,6 @@
 import { ErrorPage } from "@/pages/ErrorPage/ui/ErrorPage";
 import { Landing } from "@/pages/Landing/ui/Landing";
+import { SingleGamePage } from "@/pages/SingleGamePage";
 import { createBrowserRouter } from "react-router";
 
 export const router = createBrowserRouter([
@@ -9,8 +10,8 @@ export const router = createBrowserRouter([
         errorElement: <ErrorPage />,
     },
     {
-        path: "/game",
-        element: <div>Game</div>,
+        path: "/single-game",
+        element: <SingleGamePage />,
         errorElement: <ErrorPage />,
     }
 ])

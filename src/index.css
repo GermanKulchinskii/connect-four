@@ -12,3 +12,11 @@ body {
   background-color: var(--main-gray);
   color: var(--main-green);
 }
+
+@font-face {
+  font-family: 'ShareTechMono';
+  src: url('/fonts/public/fonts/ShareTechMono-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

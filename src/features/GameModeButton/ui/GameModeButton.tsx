@@ -1,7 +1,7 @@
-import { Button } from "@/shared/ui/Button"
+import { Button } from "@/shared/ui"
 import css from './GameModeButton.module.css';
 import { useEdaStore } from "@/entities/Eda";
-import { MessageList } from "@/entities/Eda/model/messages";
+import { MessageList } from "@/entities/Eda/types/messages";
 
 interface GameModeButtonProps {
     children?: React.ReactNode;

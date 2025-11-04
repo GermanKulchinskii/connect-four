@@ -1,0 +1,9 @@
+.board {
+    border-radius: 7px;
+    border: 1px solid var(--main-green);
+    background-color: var(--main-gray);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .7);
+    transition: all ease 0.3s;
+    display: flex;
+    width: fit-content;
+}

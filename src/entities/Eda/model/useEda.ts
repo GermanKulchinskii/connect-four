@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { type Messages, MessageList } from './messages';
+import { type Messages, MessageList } from '../types/messages';
 
 interface EdaState {
     currentMessage: Messages,

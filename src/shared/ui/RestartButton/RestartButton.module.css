@@ -1,0 +1,34 @@
+.restartWrapper {
+    transition: all 0.3s ease;
+}
+
+.restartWrapper.circling {
+    animation: spin .3s ease-in-out;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg) scale(1);
+
+    }
+    50% {
+        transform: rotate(-180deg) scale(1.2);
+    }
+    100% {
+        transform: rotate(-360deg) scale(1);
+
+    }
+}
+
+.restartIcon {
+    color: var(--main-green);
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    
+}
+
+.restartIcon svg {
+    width: 100%;
+    height: 100%;
+}

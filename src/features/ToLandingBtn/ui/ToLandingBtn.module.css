@@ -1,0 +1,11 @@
+.link {
+    color: var(--main-green);
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+}
+
+.link svg {
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,1 @@
+export {SingleGamePage} from './ui/SingleGamePage';

@@ -9,6 +9,11 @@ export const MessageList = {
     EMPTY_MODE: "Тебе трех режимов мало?",
     EDA_AVATAR_HOVER: "Чего тебе?",
     MESSAGE_404: "Заблудился в четырех кнопках?",
+    YOU_WIN: 'Победитель детской игры. Детсад в страхе',
+    YOU_LOSE: 'Да ты хуже, чем кажешься',
+    DRAW: 'Пупупуууу...',
+    RESTART: 'В моих интересах твой скорый уход, так что давай это последняя',
+    LEAVE: 'Беги, беги'
 } as const;
 
 export type Messages = typeof MessageList[keyof typeof MessageList];

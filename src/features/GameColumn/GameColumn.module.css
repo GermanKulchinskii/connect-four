@@ -1,0 +1,28 @@
+.column {
+    display: flex;
+    flex-direction: column;
+    transition: all .3s ease;
+}
+
+@media (hover:hover) {
+    .column:not(.filled):not(.over):hover {
+        transform: scale(1.1);
+        border-radius: 5px;
+    }
+}
+
+.topLeft {
+  border-radius: 5px 0 0 0;
+}
+
+.topRight {
+  border-radius: 0 5px 0 0;
+}
+
+.bottomLeft {
+  border-radius: 0 0 0 5px;
+}
+
+.bottomRight {
+  border-radius: 0 0 5px 0;
+}

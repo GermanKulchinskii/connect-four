@@ -1,7 +1,7 @@
 import { Eda } from '@/features/Eda';
 import css from './ErrorPage.module.css';
 import { useEdaStore } from '@/entities/Eda';
-import { MessageList } from '@/entities/Eda/model/messages';
+import { MessageList } from '@/entities/Eda/types/messages';
 
 export const ErrorPage = () => {
     const setMessage = useEdaStore(state => state.setCurrentMessage);
