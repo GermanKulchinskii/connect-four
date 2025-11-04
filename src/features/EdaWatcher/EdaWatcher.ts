@@ -1,42 +1,37 @@
 import { useEdaStore } from "@/entities/Eda";
-import useGameStore from "@/entities/Game/model/Model";
 import { MessageList } from "@/entities/Eda/types/messages";
 
-export const setupEdaWatcher = () => {
-  const gameStore = useGameStore;
-  const edaStore = useEdaStore;
+type GameType = "single" | "eda";
 
-  let prevWinner: ReturnType<typeof gameStore.getState>["winner"] = null;
+export const setupEdaWatcher = (gameStore: { subscribe: any; getState: any }, gameType: GameType = "single") => {
+  	const edaStore = useEdaStore;
 
-  const unsubscribe = gameStore.subscribe((state) => {
-    const winner = state.winner;
+  	const unsubscribe = gameStore.subscribe((state: any) => {
+		const winner = state.winner;
 
-    if (winner && winner !== prevWinner) {
-      prevWinner = winner;
+		if (winner) {
 
-      const { setCurrentMessage, setIsTyping } = edaStore.getState();
+			const { setCurrentMessage, setIsTyping } = edaStore.getState();
 
-      setIsTyping(true);
+			setIsTyping(true);
 
-      setTimeout(() => {
-        switch (winner) {
-          case "First":
-            setCurrentMessage(MessageList.YOU_WIN);
-            break;
-          case "Second":
-            setCurrentMessage(MessageList.YOU_LOSE);
-            break;
-          case "Draw":
-            setCurrentMessage(MessageList.DRAW);
-            break;
-        }
+			setTimeout(() => {
+			switch (winner) {
+				case "First":
+					setCurrentMessage(gameType === "eda" ? MessageList.YOU_WIN_EDA : MessageList.YOU_WIN);
+					break;
+				case "Second":
+					setCurrentMessage(gameType === "eda" ? MessageList.EDA_WINS : MessageList.YOU_LOSE);
+					break;
+				case "Draw":
+					setCurrentMessage(gameType === "eda" ? MessageList.DRAW_EDA : MessageList.DRAW);
+					break;
+			}
 
-        setIsTyping(false);
-      }, 800);
-    }
+			setIsTyping(false);
+			}, 800);
+		}
+  	});
 
-    prevWinner = winner;
-  });
-
-  return unsubscribe;
+  	return unsubscribe;
 };

@@ -1,0 +1,12 @@
+.eda {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
+.boardWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}

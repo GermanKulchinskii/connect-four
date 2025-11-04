@@ -4,11 +4,12 @@ import { OfflineHeader as Header } from '@/widgets/OfflineHeader';
 import { GameBoard } from '@/widgets/GameBoard/ui/GameBoard';
 import { useEffect } from 'react';
 import { setupEdaWatcher } from '@/features/EdaWatcher/EdaWatcher';
+import useGameStore from '@/entities/Game/model/Model';
 
 export const SingleGamePage = () => {
 
     useEffect(() => {
-        const unsubscribe = setupEdaWatcher();
+        const unsubscribe = setupEdaWatcher(useGameStore);
 
         return () => {
             unsubscribe();
@@ -17,7 +18,7 @@ export const SingleGamePage = () => {
 
     return (
         <>
-            <Header />
+            <Header gameMode='solo' />
             <div className={css.boardWrapper}>
                 <GameBoard />
             </div>

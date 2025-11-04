@@ -1,11 +1,13 @@
 import { create } from "zustand";
 
 interface GameState {
-		playerTurn: "First" | "Second";
-		board: number[][];
-		winner: null | "First" | "Second" | "Draw";
-		makeMove: (column: number) => void;
-		resetGame: () => void;
+	playerTurn: "First" | "Second";
+	board: number[][];
+	winner: null | "First" | "Second" | "Draw";
+	gameMode: 'Single' | 'Eda';
+	makeMove: (column: number) => void;
+	resetGame: () => void;
+	
 }
 
 const WIDTH = 7;
@@ -18,6 +20,7 @@ const useGameStore = create<GameState>((set, get) => ({
 	playerTurn: "First",
 	board: createEmptyBoard(),
 	winner: null,
+	gameMode: 'Single',
 
 	makeMove: (column) => {
 		const { board, playerTurn, winner } = get();
@@ -46,7 +49,7 @@ const useGameStore = create<GameState>((set, get) => ({
 export default useGameStore;
 
 
-const checkWinner = (board: number[][]): GameState["winner"] => {
+export const checkWinner = (board: number[][]): GameState["winner"] => {
 	const directions = [
 		[1, 0],
 		[0, 1],

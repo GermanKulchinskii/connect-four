@@ -1,3 +1,4 @@
+import { EdaGamePage } from "@/pages/EdaGamePage/EdaGamePage";
 import { ErrorPage } from "@/pages/ErrorPage/ui/ErrorPage";
 import { Landing } from "@/pages/Landing/ui/Landing";
 import { SingleGamePage } from "@/pages/SingleGamePage";
@@ -13,5 +14,10 @@ export const router = createBrowserRouter([
         path: "/single-game",
         element: <SingleGamePage />,
         errorElement: <ErrorPage />,
+    },
+    {
+        path: "/versus-eda",
+        element: <EdaGamePage />,
+        errorElement: <ErrorPage />
     }
 ])

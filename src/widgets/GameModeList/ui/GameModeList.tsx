@@ -11,9 +11,7 @@ export const GameModeList = () => {
                 <Link to="/single-game">
                     <GameModeButton gameMode={GAME_MODES.SINGLE_PLAYER}>Одиночная</GameModeButton>
                 </Link>
-                <Link to="/multi-game">
                     <GameModeButton gameMode={GAME_MODES.MULTI_PLAYER}>Мультиплеер</GameModeButton>
-                </Link>
                 <Link to="/versus-eda">
                     <GameModeButton gameMode={GAME_MODES.VERSUS_EDA}>Против Эды</GameModeButton>
                 </Link>
